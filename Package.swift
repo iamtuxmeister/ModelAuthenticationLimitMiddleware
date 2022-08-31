@@ -10,8 +10,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ModelAuthenticationLimitMiddleware",
-            targets: ["ModelAuthenticationLimitMiddleware"]),
+            name: "MALM",
+            targets: ["MALM"]),
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
@@ -21,7 +21,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ModelAuthenticationLimitMiddleware",
+            name: "MALM",
             dependencies: [
                 .product(name: "Fluent", package: "fluent"),
                 .product(name: "FluentMySQLDriver", package: "fluent-mysql-driver"),
@@ -29,7 +29,7 @@ let package = Package(
                 .product(name: "Vapor", package: "vapor"),
             ]),
         .testTarget(
-            name: "ModelAuthenticationLimitMiddlewareTests",
-            dependencies: ["ModelAuthenticationLimitMiddleware"]),
+            name: "MALM",
+            dependencies: ["MALM"]),
     ]
 )
