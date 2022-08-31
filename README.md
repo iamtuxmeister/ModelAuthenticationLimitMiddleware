@@ -3,6 +3,7 @@
 ## This is considered Alpha, there are breaking changes coming:
 1. Adding of a model requirement for number of concurrent sessions,
 2. Adding a argument to the authentication method for max sessions globally
+
 This is a Middleware for Vapor+Fluent that uses the Fluent Model for authentication,
 and limits the number of concurrent sessions to a value contained within the Model.
 
