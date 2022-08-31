@@ -56,6 +56,6 @@ let auth = app.grouped([
 
 ```
 
-You can have both ```ModelCredentialsAuthenticable`` and ```ModelCredentialsSingleAuthenticable``` in the same app,
+You can have both ```ModelCredentialsAuthenticable``` and ```ModelCredentialsSingleAuthenticable``` in the same app,
 using them on the same route would be redundant, and is unknown what will happen.
 
