@@ -38,11 +38,20 @@ in either your app directive or individual routes
 app.middleware.use(app.sessions.middleware)
 app.middleware.use(User.sessionAuthenticator())
 // OR 
-let auth = app.grouped([
+let sessionizer = app.grouped([
   app.sessions.middleware,
-  User.sessionAuthenticator(),
-  User.credentialsSingleAuthenticator(),
-  redirectMiddleware
+  User.sessionAuthenticator()
+])
+```
+Add the authentication to route
+
+```swift
+let auth = app.grouped([
+  User.credentialsSingleAuthenticator()
 ])
 
 ```
+
+You can have both ```ModelCredentialsAuthenticable`` and ```ModelCredentialsSingleAuthenticable``` in the same app,
+using them on the same route would be redundant, and is unknown what will happen.
+
