@@ -29,7 +29,7 @@ let package = Package(
                 .product(name: "Vapor", package: "vapor"),
             ]),
         .testTarget(
-            name: "MALM",
+            name: "MALMTests",
             dependencies: ["MALM"]),
     ]
 )
